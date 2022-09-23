@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- referencia a archivo css propio -->
     <link rel="stylesheet" href="style.css">
-    <script>console.log("Saoko papi saoko")</script>
+    <script>
+    console.log("Saoko papi saoko") 
+    function colorTitulo(){
+        console.log("Pulso el boton de Generation")
+        document.getElementById("generation").style.color="blue"
+    }
+    </script>
 
 </head>
 
@@ -62,9 +68,9 @@
     <div class="container">
         <!--se agrega un contenedor-->
         <div class="row">
-            <h1>Estar en Generation es...</h1>
+            <h1>Estar en <span id="generation">Generation</span>  es...</h1>
             <p>Tener que buscar vestuarios para viernes tematicos</p>
-            <p><a href="http://mexico.generation.org" target="_blank" class="btn btn-success">Visita la pagina de Generation</a></p>
+            <p onclick="colorTitulo()"><a href="http://mexico.generation.org" target="_blank" class="btn btn-success">Visita la pagina de Generation</a></p>
         </div>
         <!-- Descripcion HTML,CSS, JS-->
         <div class="row">
