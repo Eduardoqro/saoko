@@ -42,7 +42,9 @@ console.log("El resultado de 56+4=" +suma(56,4));
 //**************Funcion flecha***********
 /**
  * Las funciones flecha (arrow functions) funcionan de forma similar a las declaradas, pero no requieren la palabra "function" y si tienen una solo instrucción y es el retorno,
- * no requiere la instrucción "return" . Estas funciones son las mas utilizadas, tampoco se puede elevar
+ * no requiere la instrucción "return" . Estas funciones son las mas utilizadas, tampoco se puede elevar 
+ * (parameters)=> operation;
+ * (parameters)=>{return data};
  */
 /**
  * Realiza la operación de 2 numeros
@@ -72,3 +74,15 @@ function factorial(num) {
    return(num*factorial(num-1));
 }
 console.log("Factorial de 5 =" + factorial(4));
+
+//**************Reset Parameters**********
+
+function sum(a,b,...resto) { //con ...(unavariable) podemos colocar mas parametros y se maneja como un array, el forEach llama a la función flecha.
+    let suma=a+b;
+    resto.forEach(element => { //esta es una funcion flecha, si solo son dos datos solo hace el let por que el arreglo "resto" no tiene elementos (no hay que interar), si son mas de dos entra el forEach
+        //sumar =sumar+element;
+        suma+=element;
+    });
+    return suma;
+}
+console.log("El resultdo de sumar varios numeros=" + sum(2,3,5,7,3));   //Toma solo la posicion con (a,b)  
