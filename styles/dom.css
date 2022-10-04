@@ -1,0 +1,16 @@
+
+/* #titulo-h1{
+    color: brown;
+} */
+
+
+h1{
+    color:blue; 
+}
+/*
+recuenda que ID en css es con #
+con h3.color> indicamos que solo aplicames en esta calse en especifico // si es hijo de h3// selecionar clase color si son desendeientes de h3
+ */
+h3>.color{  
+color: blueviolet;
+}

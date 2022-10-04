@@ -67,7 +67,7 @@ encontrarPorTagName();
 
 function encontrarPorTagName(){
     //Obtenemos los objectos que cumplan con el tag indicado
-    //getElementsByTagName() entrega una coleccion con los objetos encontrados
+    //getElementsByTagName() entrega una coleccion con los objetos encontrados // esta en plural elements
     let elements = document.getElementsByTagName("p");
     console.log("Elementos encotrados: "+elements.length);
 
@@ -113,4 +113,26 @@ function encontrarPorSelector(){
     const elements= document.querySelectorAll("h3>.color");
     console.log("Elementos encontrados: " +elements.length);
     elements[0].innerHTML="ganas de comprar";
+}
+
+// En resumen estas son las formas de expresar un elmentos:
+// encontrarPorClase();
+// encontrarPorSelector();
+// encontrarPorTagName();
+// encontrarPorId(); 
+
+// innerHTML ENTRE CON ETIQUETAS HIJOS Y EL CONTENIDO
+
+// innerText No entrega clase hijos y solo entraga con un espacio si hay dobles espacios
+
+cambiarEstilo();
+function cambiarEstilo(){
+    const elements= document.querySelectorAll("p>.color");
+    elements[0].style.color="red";
+}
+crearElemento();
+function crearElemento(){
+    const nuevoElemento = document. createElement("p"); // para crear una nueva etiqueta al final
+    nuevoElemento.innerHTML="Este es un nuevo <strong> parrafo</strong>" // innetHTML nos estraga lo que este dentro de las etiquetas<p></p> y que van conetar //para las etiquetas que no tiene cierre , utilizamos input value
+    document.getElementById("titulo").appendChild(nuevoElemento); // esto me da la referencia del ID y va dspues de la ID titulo
 }
