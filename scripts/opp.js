@@ -1,8 +1,8 @@
 console.log("Sesion JS08 OOP");
 
 
-const miArreglo =[5,7,3,2]; // Realizar un arreglo
-const miArregloCosntructor = new Array(5,7,3,2); // Realizar un arreglo con new Array // de esta forma vamos a trabajar 
+const miArreglo =[5,7,3,2]; // Realizar un arreglo por corchetes
+const miArregloCosntructor = new Array(5,7,3,2); // Realizar un arreglo con new Array // de esta forma vamos a trabajar //Array es el nombre de la clase y lo que esta en () es el cosntrutor por lo tanto 
 
 console.log(miArreglo);
 console.log(miArregloCosntructor);
